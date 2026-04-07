@@ -1,9 +1,13 @@
 # proj-2026-sem1
-My third project at Uni (some contents are in portuguese).
 
 == ATENÇÃO: EM CONSTRUÇÃO ==
 
-# Contribuindo
+Aqui conterá a página do nosso projeto, aqui terá uma descrição sobre o código...
+
+# Limitações Conhecidas
+Considerações de implementação/Informações extras...
+
+# Contribuições
 Para contribuir com o projeto:
 - Faça um fork do projeto (https://github.com/Firespindash/proj-2026-sem1/fork) e `clone` o projeto localmente (`git clone https://github.com/seuUsuario/proj-2026-sem1`);
 - Crie sua branch (`git checkout -b branch`);
@@ -15,3 +19,5 @@ Para manter o fork atualizado e evitar problemas (pela linha de comando):
 - Então cheque com o `fetch` se tem mudanças (`git fetch upstream`);
 - Garanta que o projeto local esteja de volta a branch `main` (`git checkout main`) e aplique as mudanças (`git rebase upstream/main`);
 - Por fim, suba as mudanças online para o seu fork (`git push origin main`)
+
+Para ver a lista de contribuentes deste projeto veja o arquivo [CONTRIBUTORS](https://github.com/Firespindash/proj-2026-sem1/blob/main/CONTRIBUTORS).
