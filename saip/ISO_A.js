@@ -37,10 +37,9 @@ class A0 extends A {
       return A0.#instance;
     }
 
-    // Aqui estaria a declaração do que muda no tipo A0, ex.:
-    // this.largura = 1000;
-    // Mas, como a A0 é equivalente à base do tipo A, suas propriedades são iguais
-    
+    this.largura = 841; // Largura do A0 em mm
+    this.comprimento = 1189; // Comprimento do A0 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A0 em mm2
     A0.#instance = this;
   }
 
@@ -53,4 +52,246 @@ class A0 extends A {
   }
 }
 
-// class A1 extends A { ... }
+class A1 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A1.#instance) {
+      return A1.#instance;
+    }
+
+    this.largura = 594; // Largura do A1 em mm
+    this.comprimento = 841; // Comprimento do A1 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A1 em mm2
+    A1.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A1.#instance) {
+      A1.#instance = new A1();
+    }
+
+    return A1.#instance;
+  }
+}
+
+class A2 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A2.#instance) {
+      return A2.#instance;
+    }
+
+    this.largura = 420; // Largura do A2 em mm
+    this.comprimento = 594; // Comprimento do A2 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A2 em mm2
+    A2.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A2.#instance) {
+      A2.#instance = new A2();
+    }
+
+    return A2.#instance;
+  }
+}
+
+class A3 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A3.#instance) {
+      return A3.#instance;
+    }
+
+    this.largura = 297; // Largura do A3 em mm
+    this.comprimento = 420; // Comprimento do A3 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A3 em mm2
+    A3.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A3.#instance) {
+      A3.#instance = new A3();
+    }
+
+    return A3.#instance;
+  }
+}
+class A4 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A4.#instance) {
+      return A4.#instance;
+    }
+
+    this.largura = 210; // Largura do A4 em mm
+    this.comprimento = 297; // Comprimento do A4 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A4 em mm2
+    A4.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A4.#instance) {
+      A4.#instance = new A4();
+    }
+
+    return A4.#instance;
+  }
+}
+class A5 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A5.#instance) {
+      return A5.#instance;
+    }
+
+    this.largura = 148; // Largura do A5 em mm
+    this.comprimento = 210; // Comprimento do A5 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A5 em mm2
+    A5.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A5.#instance) {
+      A5.#instance = new A5();
+    }
+
+    return A5.#instance;
+  }
+}
+class A6 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A6.#instance) {
+      return A6.#instance;
+    }
+
+    this.largura = 105; // Largura do A6 em mm
+    this.comprimento = 148; // Comprimento do A6 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A6 em mm2
+    A6.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A6.#instance) {
+      A6.#instance = new A6();
+    }
+
+    return A6.#instance;
+  }
+}
+class A7 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A7.#instance) {
+      return A7.#instance;
+    }
+
+    this.largura = 74; // Largura do A7 em mm
+    this.comprimento = 105; // Comprimento do A7 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A7 em mm2
+    A7.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A7.#instance) {
+      A7.#instance = new A7();
+    }
+
+    return A7.#instance;
+  }
+}
+class A8 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A8.#instance) {
+      return A8.#instance;
+    }
+
+    this.largura = 74; // Largura do A8 em mm
+    this.comprimento = 105; // Comprimento do A8 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A8 em mm2
+    A8.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A8.#instance) {
+      A8.#instance = new A8();
+    }
+
+    return A8.#instance;
+  }
+}
+class A9 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A9.#instance) {
+      return A9.#instance;
+    }
+
+    this.largura = 37; // Largura do A9 em mm
+    this.comprimento = 52; // Comprimento do A9 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A9 em mm2
+    A9.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A9.#instance) {
+      A9.#instance = new A9();
+    }
+
+    return A9.#instance;
+  }
+}
+class A10 extends A {
+  static #instance;
+
+  constructor() {
+    super();
+    
+    if (A10.#instance) {
+      return A10.#instance;
+    }
+
+    this.largura = 26; // Largura do A10 em mm
+    this.comprimento = 37; // Comprimento do A10 em mm
+    this.tamanhoMax = this.largura * this.comprimento; // Tamanho máximo do A10 em mm2
+    A10.#instance = this;
+  }
+
+  static getInstance() {
+    if (!A10.#instance) {
+      A10.#instance = new A10();
+    }
+
+    return A10.#instance;
+  }
+}
+
