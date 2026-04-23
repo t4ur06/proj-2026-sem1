@@ -2,7 +2,35 @@
     margin: 0;
     padding: 0;
 }
-
+:root {
+  --base-distance: 4rem;
+  --base-margin: 9.6rem;
+  --base-text-size:1.2rem;
+}
+html{
+    font-size: 62.5%;
+}
 body {
+    background: url("img/fundo.jpg");
     height: 100vh;
+    color:  #ffffff;
+}
+#principal {
+ position:absolute;
+ top: calc(var(--base-distance)*10);
+ left: var(--base-margin);
+ font-size: calc(var(--base-text-size)*12);
+}
+#subtitulo {
+    position:absolute;
+    top: calc(var(--base-distance)*10 + 14.4rem + var(--base-distance) );
+    font-size: calc(var(--base-text-size)*6);
+}
+#texto-chamada {
+    position: absolute;
+    top: calc(var(--base-distance)*10 + var(--base-text-size)*12 + var(--base-margin) + var(--base-text-size)*6 +var(--base-distance)*2);
+    font-size: calc(var(--base-text-size)*3);
+}
+#principal, #subtitulo {
+    left:var(--base-margin);
 }
