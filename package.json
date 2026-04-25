@@ -1,0 +1,10 @@
+{
+	"devDependencies": {
+		"@supabase/doctest-js": "^0.1.0",
+		"mocha": "^11.7.5"
+	},
+        "scripts": {
+            "test": "mocha"
+        },
+        "type": "module"
+}
