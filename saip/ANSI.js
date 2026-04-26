@@ -1,4 +1,5 @@
-import { ANSI } from './interfaces.js';
+// Apenas descomente nos testes
+//import { ANSI } from './interfaces.js';
 class ANSI_A extends ANSI {
   static #instance;
   constructor() {
@@ -72,6 +73,8 @@ class ANSI_E extends ANSI {
   static getInstance() {
     if (!ANSI_E.#instance) ANSI_E.#instance = new ANSI_E();
     return ANSI_E.#instance;
-  }  
+  }
 }
-export { ANSI_A, ANSI_B, ANSI_C, ANSI_D, ANSI_E };
+
+// Descomente apenas para os testes
+//export { ANSI_A, ANSI_B, ANSI_C, ANSI_D, ANSI_E };
