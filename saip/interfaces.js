@@ -15,22 +15,10 @@ class iPapel {
     this.gramatura = gramatura;
   }
 
-  /**
-   * Retorna uma string com os atributos relevantes
-   *
-   * @example mostrarPropriedades()
-   * //=> "999949 mm, 999949 mm, white, 95 gsm, 999949 mm2"
-   */
   mostrarPropriedades() {
     throw new Error("O método 1 deve ser implementado em uma classe.");
   }
-
-  /**
-   * Retorna uma string com o formato do papel
-   *
-   * @example mostrarPropriedades()
-   * //=> "999949 mm, 999949 mm, white, 95 gsm, 999949 mm2"
-   */
+  
   mostrarTamanhoFolha() {
     throw new Error("O método 2 deve ser implementado em uma classe.");
   }
@@ -52,6 +40,12 @@ class ISO extends iPapel {
   }
 }
 
+/**
+ * Interface ANSI para as superclasses ANSI_, de A a E
+ *
+ * @interface
+ * @extends {iPapel}
+ */
 class ANSI extends iPapel {
   constructor(largura, comprimento, cor, gramatura) {
     super(largura, comprimento, cor, gramatura);
@@ -63,7 +57,7 @@ class ANSI extends iPapel {
   // Racional para mostrar em mm de pol e transformar em string 
   mostrarTamanhoFolha() {
     const mm = this.convPolEmMM();
-    return `${this.largura}" x ${this.comprimento}" (${mm.larguraMM.toFixed(1)} x ${mm.comprimentoMM.toFixed(1)} mm)`;
+    return `${mm.larguraMM.toFixed(1)} x ${mm.comprimentoMM.toFixed(1)} mm`;
   }
   // proporcao de 1 in = 25.4 mm
   convPolEmMM() {
@@ -75,4 +69,4 @@ class ANSI extends iPapel {
 }
 
 // Descomente apenas para os testes com doctest-js
-// export { iPapel, ISO }
+// export { iPapel, ISO, ANSI }
