@@ -19,10 +19,6 @@ class C extends ISO {
     return `${this.largura} mm, ${this.comprimento} mm, ${this.cor}, ${this.gramatura} gsm, ${this.tamanhoMax} mm2`;
   }
   
-  mostrarTamanhoFolha() {
-    return `${this.tamanhoMax} x ${this.tamanhoMax} mm`;
-  }
-  
   retornar_tipos() {
     return this.tipos;
   }

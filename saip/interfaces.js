@@ -35,8 +35,14 @@ class ISO extends iPapel {
     super();
     
     if (this.constructor === ISO) {
-      throw new Error("... ISO.");
+      throw new Error("Não instancie ISO diretamente.");
     }
+
+    this.tamanhoMax = tamanhoMax;
+  }
+
+  mostrarTamanhoFolha() {
+    return `${this.largura} x ${this.comprimento} mm`;
   }
 }
 
@@ -47,25 +53,28 @@ class ISO extends iPapel {
  * @extends {iPapel}
  */
 class ANSI extends iPapel {
-  constructor(largura, comprimento, cor, gramatura) {
-    super(largura, comprimento, cor, gramatura);
+  constructor(largura, comprimento, cor, gramatura, tamanhoMax) {
+    super();
     
     if (this.constructor === ANSI) {
       throw new Error("Não instancie ANSI diretamente.");
     }
+
+    this.largura = largura;
+    this.comprimento = comprimento;
+    this.tamanhoMax = tamanhoMax;
   }
   // Racional para mostrar em mm de pol e transformar em string 
   mostrarTamanhoFolha() {
-    const mm = this.convPolEmMM();
-    return `${mm.larguraMM.toFixed(1)} x ${mm.comprimentoMM.toFixed(1)} mm`;
+    return `${this.largura} x ${this.comprimento} in`;
   }
   // proporcao de 1 in = 25.4 mm
-  convPolEmMM() {
-    return {
-      larguraMM: this.largura * 25.4,
-      comprimentoMM: this.comprimento * 25.4
-  };
- }
+  converterPolegadasEmMM() {
+    this.proporcao = 25.4;
+    this.precisao = 1;
+
+    return `${(this.largura * this.proporcao).toFixed(this.precisao)} x ${(this.comprimento * this.proporcao).toFixed(this.precisao)} mm`;
+  }
 }
 
 // Descomente apenas para os testes com doctest-js

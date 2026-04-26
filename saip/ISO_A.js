@@ -1,10 +1,9 @@
-/**
- * @implements {ISO}
- */
-
 // Descomente apenas para os testes com doctest-js
 // import { ISO } from './interfaces.js';
 
+/**
+ * @implements {ISO}
+ */
 class A extends ISO {
   static tamanhoMax = 999949;
   
@@ -24,10 +23,6 @@ class A extends ISO {
 
   mostrarPropriedades() {
     return `${this.largura} mm, ${this.comprimento} mm, ${this.cor}, ${this.gramatura} gsm, ${this.tamanhoMax} mm2`;
-  }
-  
-  mostrarTamanhoFolha() {
-    return `${this.largura} x ${this.comprimento} mm`;
   }
 
   retornar_tipos() {

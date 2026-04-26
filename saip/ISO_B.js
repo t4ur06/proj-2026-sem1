@@ -19,10 +19,6 @@ class B extends ISO {
     return `${this.largura} mm, ${this.comprimento} mm, ${this.cor}, ${this.gramatura} gsm, ${this.tamanhoMax} mm2`;
   }
   
-  mostrarTamanhoFolha() {
-    return `${this.largura} x ${this.comprimento} mm`;
-  }
-
   retornar_tipos() {
     return this.tipos;
   }
