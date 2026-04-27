@@ -44,7 +44,7 @@
      let padroesCustom = listaPadroesCustomizados.val.flatMap(obj => obj.tipos.flatMap(tipo => Object.keys(tipo)));
      let padroesCustomIds = listaPadroesCustomizados.val.map(id => id.id);
      
-     const opcoes = [...TipoA.tipos, ...TipoB.tipos, ...TipoC.tipos, "ANSI_A", "ANSI_B", "ANSI_C", "ANSI_D", "ANSI_E", ...padroesCustom];
+     const opcoes = [...TipoA.retornar_tipos(), ...TipoB.retornar_tipos(), ...TipoC.retornar_tipos(), "ANSI_A", "ANSI_B", "ANSI_C", "ANSI_D", "ANSI_E", ...padroesCustom];
      const sugestoesGramatura = [70, 75, 80, 85, 90, 95, 100, 105];
      
      van.derive(() => padroesCustom = listaPadroesCustomizados.val.flatMap(padrao => padrao.tipos.flatMap(tipo => Object.keys(tipo))));

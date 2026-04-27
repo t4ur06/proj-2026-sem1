@@ -5,16 +5,15 @@
  * @implements {ISO}
  */
 class B extends ISO {
-  static tamanhoMax = 1414000;
+  static tipos = ["B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"];
   
-  constructor() {
+  constructor(largura, comprimento, tamanhoMax) {
     super();
-    this.largura = this.tamanhoMax;
-    this.comprimento = this.tamanhoMax;
+    this.largura = largura;
+    this.comprimento = comprimento;
     this.cor = "white"; // Significa branco ou #fff
     this.gramatura = 95;
-    this.tamanhoMax = this.tamanhoMax;
-    this.tipos = ["B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"];
+    this.tamanhoMax = tamanhoMax;
     
     if (this.constructor === B) {
       throw new Error("Por favor, não tente instanciar a classe abstrata B.");
@@ -26,7 +25,7 @@ class B extends ISO {
   }
   
   retornar_tipos() {
-    return this.tipos;
+    return this.constructor.tipos;
   }
 }
 
@@ -34,15 +33,12 @@ class B0 extends B {
   static #instance;
 
   constructor() {
-    super();
+    super(1000, 1414, 1414000);
     
     if (B0.#instance) {
       return B0.#instance;
     }
 
-    this.largura = 1000; // Largura do B0 em mm
-    this.comprimento = 1414; // Comprimento do B0 em mm
-    this.tamanhoMax = 1414000; // Tamanho máximo do B0 em mm2
     B0.#instance = this;
   }
 
@@ -50,9 +46,23 @@ class B0 extends B {
    * Retorna uma string com os atributos relevantes
    *
    * @example mostrarPropriedades()
-   * //=> "841 mm, 1189 mm, white, 95 gsm, 999949 mm2"
+   * //=> "1000 mm, 1414 mm, white, 95 gsm, 1414000 mm2"
    */
-    
+
+  /**
+   * Retorna uma string com o formato do papel
+   *
+   * @example mostrarTamanhoFolha()
+   * //=> "1000 x 1414 mm"
+   */
+
+  /**
+   * Retorna uma string com os tipos da especificação B
+   *
+   * @example retornar_tipos()
+   * //=> ["B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"]
+   */
+  
   static getInstance() {
     if (!B0.#instance) {
       B0.#instance = new B0();
