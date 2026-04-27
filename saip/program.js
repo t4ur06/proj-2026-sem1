@@ -1,3 +1,6 @@
+// Descomente apenas para os testes
+import { A0 } from './ISO_A.js';
+
 class iFactory {
   criarPapel(tipo) {
     let primeiraLetra = tipo.charAt(0);
@@ -128,3 +131,6 @@ const validarSpecs = json => {
 const listaPadroesCustom = JSON.parse(localStorage.getItem("padroesCustomizados") || "[]");
 
 const guardarJson = arr => localStorage.setItem("padroesCustomizados", JSON.stringify(arr))
+
+// Descomente apenas para os testes
+export { iFactory }
