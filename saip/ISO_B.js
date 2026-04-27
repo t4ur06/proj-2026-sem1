@@ -50,7 +50,7 @@ class B0 extends B {
    * Retorna uma string com os atributos relevantes
    *
    * @example mostrarPropriedades()
-   * //=> "841 mm, 1189 mm, white, 95 gsm, 999949 mm2"
+   * //=> "1000 mm, 1414 mm, white, 95 gsm, 1414000 mm2"
    */
     
   static getInstance() {

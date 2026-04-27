@@ -4,6 +4,7 @@
 /**
  * @implements {ISO}
  */
+
 class A extends ISO {
   static tamanhoMax = 999949;
   
