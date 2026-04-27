@@ -62,6 +62,8 @@ class ANSI extends iPapel {
 
     this.largura = largura;
     this.comprimento = comprimento;
+    this.cor = cor;
+    this.gramatura = gramatura;
     this.tamanhoMax = tamanhoMax;
   }
   // Racional para mostrar em mm de pol e transformar em string 
@@ -78,4 +80,4 @@ class ANSI extends iPapel {
 }
 
 // Descomente apenas para os testes com doctest-js
-// export { iPapel, ISO, ANSI }
+export { iPapel, ISO, ANSI }

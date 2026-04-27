@@ -1,10 +1,11 @@
 {
 	"devDependencies": {
 		"@supabase/doctest-js": "^0.1.0",
-		"mocha": "^11.7.5"
+		"mocha": "^11.7.5",
+		"mock-local-storage": "^1.1.24"
 	},
-        "scripts": {
-            "test": "mocha"
-        },
-        "type": "module"
+	"scripts": {
+		"test": "mocha --require mock-local-storage"
+	},
+	"type": "module"
 }
